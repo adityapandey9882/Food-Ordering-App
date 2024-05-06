@@ -21,13 +21,12 @@
 
 Two types of Export/Import 
 
-
-- Default  Export/Import (But in Default only Import/Export at a time)
+- Default  Export/Import (But in Default only one file Import/Export at a time)
 
 export default Component;
 import Component from "path";
 
-- Named Export/Import (Using named we can conduct multiple Import/Export)
+- Named Export/Import (Using named we can conduct multiple file Import/Export)
 
 expot const Component;
 import {Component} from "path";
@@ -38,4 +37,4 @@ import {Component} from "path";
  (Normal JS utility function)
  // Two important utility function of Hooks
 - useState() - used to create Superpowerful state Variable in react
-- useEffect() - 
+- useEffect() - used to Handle side effect on the components fetching data, directly updating the DOM.
