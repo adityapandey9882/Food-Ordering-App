@@ -14,7 +14,7 @@ const RestaurantMenu = () =>{
     }, []);
 
     const fetchMenu= async () =>{
-        const data = await fetch(DATA_API +resId+"&catalog_qa=undefined&isMenuUx4=true&submitAction=ENTER");
+        const data = await fetch(DATA_URL +resId+"&catalog_qa=undefined&isMenuUx4=true&submitAction=ENTER");
         const json = await data.json();
         console.log(json)
         setResInfo(json.data)
