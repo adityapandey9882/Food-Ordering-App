@@ -1,6 +1,6 @@
 # Namaste Food
 
-/**
+/*
 * Header
 * - Logo
 * - Nav Items
@@ -34,7 +34,7 @@ import {Component} from "path";
 
 ...
 # React Hooks
- (Normal JS utility function)
+ (Normal JS utility function)       //who wrote this facebook developer
  // Two important utility function of Hooks
 - useState() - used to create Superpowerful state Variable in react
 - useEffect() - used to Handle side effect on the components fetching data, directly updating the DOM.
