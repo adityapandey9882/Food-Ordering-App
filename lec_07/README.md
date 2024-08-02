@@ -31,4 +31,33 @@
 
 # How we create State variable in Class based components.
 
-  
+  # syntax
+   class UserClass extends React.Component {
+    constructor(props) {
+      super(props);
+
+      // useState variable 
+      
+      this.state = {          //this.state is big state that contain all the state variable
+        count: 0,                   count:0,
+                                    count2:2,
+      };                           
+    }
+    render() {
+      const{count} = this.state;      //Destructure 
+      return( 
+       <h1>Count:{count}</h1>
+       <button>
+      );
+    }
+   }
+
+ # How we update the state variable 
+ create a button and by onClick handler it takes a callback function
+ <button onClick = {() => {
+    this.setState({
+      count: this.state.count + 1,          // if i want to update count2:2, write it same on down
+                                              count2: this.state.count2 + 1
+    });
+ }}
+ >
