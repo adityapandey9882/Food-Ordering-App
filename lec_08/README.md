@@ -61,23 +61,3 @@
     });
  }}
  >
-
-  //React Life Cycle Diagram
-    Divided in three part 1- Mounting 2- Updating 3- Unmounting 
-
-    /*
-- Parent Constructor
-- Parent render
-
-    - sumit contructor
-    - sumit render
-
-    - Elon constructor
-    - Elon render
-
-    sumit component did mount
-    Elon component did mount 
-
-- parent component did mount 
-
-*/

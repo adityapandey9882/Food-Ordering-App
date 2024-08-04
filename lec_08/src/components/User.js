@@ -1,13 +1,9 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 
 
 const User = (props) => {
     const [count, setcount] = useState(0);
-// const User = ({name}) => {   // Instead of props Also we destructure it like This
-    useEffect(() => {
-        //API calls
-    }, []);
-    
+// const User = ({name}) => {   // Instead of props Also we destructure is like This
     return (
     <div className = "user-card">
         <h1>Count = {count}</h1>
