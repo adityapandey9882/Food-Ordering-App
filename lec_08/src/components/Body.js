@@ -27,12 +27,13 @@ const Body = () =>{
     const json = await data.json();
     console.log(json);
 
-    setlistOfRestaurant(json?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
-    setfilterRestaurant(json?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
+    // optional chaining 
+    const restaurant = json?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants;
+    
+    setlistOfRestaurant(restaurant);
+    setfilterRestaurant(restaurant);
     
 
-    // optional chaining 
-    // setlistOfRestaurant(listOfRestaurants);
   };
 
   return listOfRestaurants.length === 0 ? <Shimmer/> : (
