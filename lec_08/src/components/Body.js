@@ -2,11 +2,12 @@ import RestaurantCart from "./RestaurantCart";
 import { useState, useEffect } from "react";
 import Shimmer from "./Shimmer";
 import { Link } from "react-router-dom";
+import useOnlineStatus from "../utils/useOnlineStatus";
 
 const Body = () =>{
   // Local State Variable - Super Powerful variable
-  const [listOfRestaurants, setlistOfRestaurant] = useState([]);
-  const [filterRestaurant, setfilterRestaurant] = useState([]);
+  const [listOfRestaurants, setlistOfRestaurants] = useState([]);
+  const [filterRestaurant, setFilterRestaurant] = useState([]);
 
   const [searchText, setSearchText] = useState("");
 
@@ -28,13 +29,20 @@ const Body = () =>{
     console.log(json);
 
     // optional chaining 
-    const restaurant = json?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants;
+    const restaurant = json?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants || [];
     
-    setlistOfRestaurant(restaurant);
-    setfilterRestaurant(restaurant);
-    
-
+    setlistOfRestaurants(restaurant);
+    setFilterRestaurant(restaurant);
   };
+
+  const onlineStatus = useOnlineStatus();
+
+  if(onlineStatus === false) 
+    return (
+      <h1>
+        Looks like you're offline!! Please check your internet connection
+      </h1>
+    )
 
   return listOfRestaurants.length === 0 ? <Shimmer/> : (
     <div className="Body">
@@ -54,16 +62,16 @@ const Body = () =>{
               (res)=>res.info.name.toLowerCase().includes(searchText)
               );
 
-              setfilterRestaurant(filteredRestaurant);
+              setFilterRestaurant(filteredRestaurant);
           }}>Search </button>
         </div>
         <button className="filter-btn" 
         onClick={() =>{
           // filter logic here 
-        const filtered = filterRestaurant.filter(
+        const filtered = listOfRestaurants.filter(
           (res)=> res.info.avgRating > 4
       );
-        setfilterRestaurant(filtered)
+        setFilterRestaurant(filtered);
         }}
         >
           Top Rated Restaurant</button>
