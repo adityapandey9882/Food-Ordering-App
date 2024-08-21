@@ -1,2 +1,2 @@
-# Data is the new Oild 
+# Data is the new Oil
 Higher order component - A higher-order component is a function that takes a component and returns a new component with enhanced functionality. It's essentially a function that wraps around a component to provide additional features or behavior.
