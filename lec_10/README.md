@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Food-Ordering-App
 
 - Fuctional Based Component - Is fuction which return some piece of jsx.
@@ -61,3 +62,7 @@
     });
  }}
  >
+=======
+# Data is the new Oil
+Higher order component - A higher-order component is a function that takes a component and returns a new component with enhanced functionality. It's essentially a function that wraps around a component to provide additional features or behavior.
+>>>>>>> 2f63b41a3a1030daf521af7609eb8eb25fbe1da0
