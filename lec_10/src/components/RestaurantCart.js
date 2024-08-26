@@ -27,21 +27,6 @@ const RestaurantCart= (props) => {
           <h5>{locality}</h5>                
       </div>
   );
-};
-
-// Higher Order Component 
-
-// Input - RestaurantCArd => RestaurantCardPromoted
-
-export const withPromotedLabel = (RestaurantCart) =>{
-  return (props) => {
-    return (
-      <div>
-        <label>Promoted</label>
-        <RestaurantCart {...props}/>
-      </div>
-    )
-  }
-}
+  };
 
   export default RestaurantCart
